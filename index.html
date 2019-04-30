@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>挨拶を返します！</title>
-
+    <script type="text/javascript" src="ajax.js"></script>
 </head>
 <body>
      <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="page-header">
-                    <h1>
-                        挨拶ジェネレータ <small>今の時間帯を教えて下さい</small>
+                    <h1 class="pt-4 pb-3">
+                        挨拶ジェネレータ <small class="text-primary mx-3">今の時間帯を教えて下さい</small>
                     </h1>
                 </div>
                 <form role="form">
@@ -29,8 +29,8 @@
                             <option value="夜">夜</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">
-                        Submit
+                    <button type="button" id="submit-button" class="btn btn-primary">
+                        送信
                     </button>
                 </form>
             </div>
