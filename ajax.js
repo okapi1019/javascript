@@ -15,7 +15,6 @@ $('#submit-button').on('click',function(){
         success: out => {
             alert(out.answer);
             var ary = out.message.split(",");
-            console.log(ary);
             $('#chat-text').html("");
             ary.forEach(element => {
                 $('#chat-text').append("<p>" + element + "</p>");    
@@ -40,3 +39,18 @@ $('#clear-button').on('click',function(){
         }
     });
 });
+
+$(function(){
+    $.ajax({
+        type: 'get',
+        url: endpoint,
+        dataType: 'jsonp',
+        success: out => {
+            var ary = out.message.split(",");
+            $('#chat-text').html("");
+            ary.forEach(element => {
+                $('#chat-text').append("<p>" + element + "</p>");    
+            });
+        }
+    });
+})
