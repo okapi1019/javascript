@@ -13,5 +13,5 @@ $('#submit-button').on('click',function(){
         success: out => {
             alert(out.answer);
         }
-    })
+    });
 })
