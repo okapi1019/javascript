@@ -14,6 +14,29 @@ $('#submit-button').on('click',function(){
         },
         success: out => {
             alert(out.answer);
+            var ary = out.message.split(",");
+            console.log(ary);
+            $('#chat-text').html("");
+            ary.forEach(element => {
+                $('#chat-text').append("<p>" + element + "</p>");    
+            });
         }
     });
-})
+});
+
+//クリアボタンが押されたらチャット内容をクリアする処理。
+$('#clear-button').on('click',function(){
+    $('#chat-text').html("");
+
+    $.ajax({
+        type: 'get',
+        url: endpoint,
+        dataType: 'jsonp',
+        data:{
+            status: 999
+        },
+        success: out => {
+            alert("チャット内容を消去しました。");
+        }
+    });
+});
