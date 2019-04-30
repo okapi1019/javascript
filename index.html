@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>挨拶を返します！</title>
 </head>
+
 <body>
-     <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="page-header">
                     <h1 class="pt-4 pb-3">
-                        挨拶ジェネレータ <small class="text-primary mx-3">今の時間帯を教えて下さい</small>
+                        挨拶Bot <small class="text-primary mx-3">今の時間帯を教えて下さい</small>
                     </h1>
                 </div>
                 <form role="form">
                     <div class="form-group">
-                         
+
                         <label for="select">
                             時間帯の選択
                         </label>
@@ -27,18 +29,32 @@
                             <option value="昼">昼</option>
                             <option value="夜">夜</option>
                         </select>
+
+                        <label for="chat" class="col-form-label">チャット記入欄</label>
+                                <input id="chat" name="chat" placeholder="ここにチャットしたい内容を書いて下さい。" type="text" class="form-control"
+                                    aria-describedby="chatHelpBlock">
+                            <span id="chatHelpBlock" class="form-text text-muted">書いた内容がサーバーに送られます。</span>
                     </div>
                     <button type="button" id="submit-button" class="btn btn-primary">
                         送信
                     </button>
+                    <button type="button" id="clear-button" class="btn btn-danger">
+                        チャット内容をクリア
+                    </button>
+                    <div id="chat-text" class="h2 text-success"></div>
                 </form>
             </div>
         </div>
     </div>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="ajax.js"></script>
 </body>
+
 </html>
