@@ -41,6 +41,12 @@ $('#clear-button').on('click',function(){
 });
 
 $(function(){
+    update();
+    setInterval("update()",5000);
+});
+
+function update(){
+    console.log("アップデートしました");
     $.ajax({
         type: 'get',
         url: endpoint,
@@ -52,5 +58,5 @@ $(function(){
                 $('#chat-text').append("<p>" + element + "</p>");    
             });
         }
-    });
-})
+    })
+};
